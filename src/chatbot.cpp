@@ -89,6 +89,7 @@ ChatBot &ChatBot::operator=(ChatBot &&source){
     source._chatLogic = nullptr;
     source._currentNode = nullptr;
     source._image = NULL;
+    return *this;
 }
 
 ////
