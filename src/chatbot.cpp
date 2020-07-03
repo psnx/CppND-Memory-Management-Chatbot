@@ -55,14 +55,14 @@ ChatBot::ChatBot(const ChatBot &source){
 }
 
 ChatBot &ChatBot::operator=(const ChatBot &source){
-    std::cout << "Chatbot Copy Assignment operator";
+    std::cout << "Chatbot Copy Assignment operator \n";
     if (this == &source) return *this;
     _chatLogic = source._chatLogic;
     _rootNode = source._rootNode;
     _currentNode = source._currentNode;
+    _image = new wxBitmap;
     *_image = *source._image;
     _chatLogic->SetChatbotHandle(this);
-    
     return *this;
 }
 
